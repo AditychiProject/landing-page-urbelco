@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Home Section Animate */
+.animate {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.fadeDownBtn {
+  -webkit-animation-name: fadeDownBtn;
+  animation-name: fadeDownBtn;
+}
+
+@keyframes fadeDownBtn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-10%, 0, 0);
+    transform: translate3d(-10%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeDownLogo {
+  -webkit-animation-name: fadeDownLogo;
+  animation-name: fadeDownLogo;
+}
+
+@keyframes fadeDownLogo {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 40%, 0);
+    transform: translate3d(0, 40%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Typography */
+.headlinee {
+  @apply text-2xl lg:text-4xl text-primary font-bold mb-4;
+}
+
+.headlinee-bg-primary {
+  @apply text-3xl lg:text-4xl text-light font-bold mb-4;
+}
+
+.body {
+  @apply text-sm text-paragraph tracking-[0.3px] leading-loose;
+}
+
+/* Gallery */
+.content-3x3 {
+  @apply w-full aspect-square object-cover object-center border border-slate-200;
+}
+
+/* Form */
+.form-label {
+  @apply block text-sm mb-2;
+}
+
+.form-input {
+  @apply block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3;
+}
+
+.select-input {
+  @apply appearance-none;
+}
