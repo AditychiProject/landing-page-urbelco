@@ -4,20 +4,114 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- CSS -->
-    <link href="src/output.css" rel="stylesheet" />
+    <link href="output.css" rel="stylesheet" />
     <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
     <title>Urbelco</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center w-full fixed z-50 bg-primary p-6">
+      <!-- Brand -->
+      <a href="index.html"><img class="h-10" src="img/logo.png" alt="Logo Urbelco" /></a>
+      <!-- Hamburger Menu Button -->
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-light">
+          <svg class="block w-6 h-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Nav Link -->
+      <ul class="hidden lg:flex lg:items-center lg:w-auto absolute top-1/2 left-1/2 lg:mx-auto transform -translate-x-1/2 -translate-y-1/2">
+        <!-- Home -->
+        <li>
+          <a href="#login" class="text-sm text-light font-medium mx-6">Home</a>
+        </li>
+        <!-- About -->
+        <li>
+          <a href="#about" class="text-sm text-light font-medium mx-6">About</a>
+        </li>
+        <!-- Workspace -->
+        <li>
+          <a href="#workspace" class="text-sm text-light font-medium mx-6">Workspace</a>
+        </li>
+        <!-- Research -->
+        <li>
+          <a href="#research" class="text-sm text-light font-medium mx-6">Research</a>
+        </li>
+        <!-- Environment -->
+        <li>
+          <a href="#environment" class="text-sm text-light font-medium mx-6">Environment</a>
+        </li>
+        <!-- Class -->
+        <li>
+          <a href="#class" class="text-sm text-light font-medium mx-6">Class</a>
+        </li>
+        <!-- Contact -->
+        <li>
+          <a href="#contact" class="text-sm text-light font-medium mx-6">Contact</a>
+        </li>
+      </ul>
+      <!-- Search Bar -->
+      <div class="hidden lg:block">
+        <input type="text" name="search" id="search" class="w-full text-sm text-light bg-[#17384c] border-2 border-light/50 focus:border-light/100 focus:outline-none rounded-full px-4 py-3" placeholder="Cari disini" autocomplete="off" />
+      </div>
+    </nav>
+    <!-- Navbar Mobile -->
+    <div class="navbar-menu hidden relative z-50">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav class="flex flex-col max-w-sm w-5/6 overflow-y-auto fixed top-0 left-0 bottom-0 bg-light border-r p-6">
+        <!-- Close Navbar Mobile Button -->
+        <div class="flex justify-end items-center mb-8">
+          <button class="navbar-close">
+            <svg class="cursor-pointer w-6 h-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Nav Links Mobile -->
+        <ul>
+          <!-- Home -->
+          <li class="mb-1">
+            <a href="#login" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Home</a>
+          </li>
+          <!-- About -->
+          <li class="mb-1">
+            <a href="#about" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">About</a>
+          </li>
+          <!-- Workspace -->
+          <li class="mb-1">
+            <a href="#workspace" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Workspace</a>
+          </li>
+          <!-- Research -->
+          <li class="mb-1">
+            <a href="#research" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Research</a>
+          </li>
+          <!-- Environment -->
+          <li class="mb-1">
+            <a href="#environment" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Environment</a>
+          </li>
+          <!-- Class -->
+          <li class="mb-1">
+            <a href="#class" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Class</a>
+          </li>
+          <!-- Contact -->
+          <li class="mb-1">
+            <a href="#contact" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Contact</a>
+          </li>
+        </ul>
+        <!-- Search Bar -->
+        <div class="block lg:hidden mt-auto mb-8">
+          <input type="text" name="" id="" class="w-full text-sm text-black bg-slate-100 focus:outline-primary rounded-full px-4 py-3" placeholder="Cari disini" autocomplete="off" />
+        </div>
+      </nav>
+    </div>
     <!-- Home Section -->
-    <section id="home" class="flex justify-center items-center min-h-screen bg-cover object-cover pt-36 lg:pt-48 pb-16 lg:pb-36" style="background-image: url('src/img/hero-bg.png')">
+    <section id="home" class="flex justify-center items-center min-h-screen bg-cover object-cover pt-36 lg:pt-48 pb-16 lg:pb-36" style="background-image: url('img/hero-bg.png')">
       <div class="container">
         <div class="flex justify-center items-center">
           <div class="text-center m-auto">
-            <img class="animate fadeDownLogo h-44 lg:h-[280px]" src="src/img/hero-logo.png" alt="Logo Urbelco" />
+            <img class="animate fadeDownLogo h-44 lg:h-[280px]" src="img/hero-logo.png" alt="Logo Urbelco" />
             <a
               href="#login"
               class="animate fadeDownBtn inline-block text-sm text-light hover:text-black font-medium bg-slate-500/25 hover:bg-light border-2 border-light/30 backdrop-blur-[10px] rounded-lg mt-6 px-12 py-4 transition-colors duration-300"
@@ -29,23 +123,23 @@
       </div>
     </section>
     <!-- Login Section -->
-    <section id="login" class="flex w-full min-h-screen bg-cover pt-28 pb-16 lg:py-36" style="background-image: url('src/img/login-bg.png')">
+    <section id="login" class="flex w-full min-h-screen bg-cover pt-28 pb-16 lg:py-36" style="background-image: url('img/login-bg.png')">
       <div class="container m-auto">
         <!-- Logo Urbelco -->
-        <img class="block h-14 lg:h-20 mx-auto mb-10 lg:mb-14" src="src/img/urbelco.png" alt="Logo Urbelco" />
+        <img class="block h-14 lg:h-20 mx-auto mb-10 lg:mb-14" src="img/urbelco.png" alt="Logo Urbelco" />
         <!-- Form Login -->
         <div class="max-w-lg bg-light rounded-xl mx-auto px-6 py-12">
           <h2 class="text-2xl text-center uppercase font-bold mb-8">Login</h2>
           <form action="" method="post">
             <!-- Email -->
             <div class="mb-6">
-              <label for="email" class="block text-sm mb-2">Email</label>
-              <input type="email" name="email" id="email" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="Lorem Ipsum" />
+              <label for="login_email" class="block text-sm mb-2">Email</label>
+              <input type="email" name="email" id="login_email" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="Lorem Ipsum" />
             </div>
             <!-- Password -->
             <div class="mb-6">
-              <label for="password" class="block text-sm mb-2">Password</label>
-              <input type="password" name="password" id="password" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="********" />
+              <label for="login_password" class="block text-sm mb-2">Password</label>
+              <input type="password" name="password" id="login_password" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="********" />
             </div>
             <!-- Login Button -->
             <button type="submit" name="login" class="w-full text-sm text-light font-medium bg-primary hover:bg-[#17384c] rounded-md p-4 transition duration-200">Login</button>
@@ -53,9 +147,9 @@
           <p class="text-sm text-center my-6">Atau</p>
           <!-- Social Media -->
           <div class="flex justify-evenly items-center w-1/2 lg:w-2/5 mx-auto">
-            <a href=""><img class="w-8 h-8 hover:scale-105 transition duration-300" src="src/img/socmed/fb.png" alt="Facebook" /></a>
-            <a href=""><img class="w-8 h-8 hover:scale-105 transition duration-300" src="src/img/socmed/linkedin.png" alt="LinkedIn" /></a>
-            <a href=""><img class="w-8 h-8 hover:scale-105 transition duration-300" src="src/img/socmed/email.png" alt="Email" /></a>
+            <a href=""><img class="w-8 h-8 hover:scale-105 transition duration-300" src="img/socmed/fb.png" alt="Facebook" /></a>
+            <a href=""><img class="w-8 h-8 hover:scale-105 transition duration-300" src="img/socmed/linkedin.png" alt="LinkedIn" /></a>
+            <a href=""><img class="w-8 h-8 hover:scale-105 transition duration-300" src="img/socmed/email.png" alt="Email" /></a>
           </div>
           <!-- Register Link -->
           <div class="text-center mt-6">
@@ -72,7 +166,7 @@
           <!-- Left Column - Header -->
           <div class="mr-0 lg:mr-8 mb-4 lg:mb-0">
             <h2 class="headlinee">About</h2>
-            <img class="h-12" src="src/img/tentang-urbelco.png" alt="Logo Urbelco" />
+            <img class="h-12" src="img/tentang-urbelco.png" alt="Logo Urbelco" />
           </div>
           <!-- Right Column - Body -->
           <div class="max-w-2xl">
@@ -95,7 +189,7 @@
       </div>
     </section>
     <!-- Workspace Section -->
-    <section id="workspace" class="bg-cover bg-center pt-28 pb-16 lg:py-36" style="background-image: url('src/img/workspace-section.png')">
+    <section id="workspace" class="bg-cover bg-center pt-28 pb-16 lg:py-36" style="background-image: url('img/workspace-section.png')">
       <div class="container">
         <!-- Header -->
         <div class="max-w-2xl lg:mx-auto mb-12">
@@ -105,7 +199,7 @@
         <div class="grid lg:grid-cols-2 gap-x-0 lg:gap-x-6 gap-y-8">
           <!-- Engineer Studio -->
           <div class="flex flex-wrap lg:flex-nowrap items-center">
-            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="src/img/engineer-studio-img.png" alt="Logo Engineer Studio" />
+            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="img/engineer-studio-img.png" alt="Logo Engineer Studio" />
             <div class="max-w-full ml-0 lg:ml-4">
               <h3 class="text-xl text-light font-semibold mb-3">Engineer Studio</h3>
               <p class="text-sm text-light/70 leading-loose">
@@ -116,7 +210,7 @@
           </div>
           <!-- Legal Consultant for Buildings Industries -->
           <div class="flex flex-wrap lg:flex-nowrap items-center">
-            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="src/img/legal-consultant-img.png" alt="Logo Legal Consultant for Buildings Industries" />
+            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="img/legal-consultant-img.png" alt="Logo Legal Consultant for Buildings Industries" />
             <div class="max-w-full ml-0 lg:ml-4">
               <h3 class="text-xl text-light font-semibold mb-3">Legal Consultant for Buildings Industries</h3>
               <p class="text-sm text-light/70 leading-loose">
@@ -126,7 +220,7 @@
           </div>
           <!-- Environment Consultant -->
           <div class="flex flex-wrap lg:flex-nowrap items-center">
-            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="src/img/environment-consultant-img.png" alt="Logo Environment Consultant" />
+            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="img/environment-consultant-img.png" alt="Logo Environment Consultant" />
             <div class="max-w-full ml-0 lg:ml-4">
               <h3 class="text-xl text-light font-semibold mb-3">Environment Consultant</h3>
               <p class="text-sm text-light/70 leading-loose">
@@ -137,7 +231,7 @@
           </div>
           <!-- Engineering and Science -->
           <div class="flex flex-wrap lg:flex-nowrap items-center">
-            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="src/img/engineering&sicence-img.png" alt="Logo Engineering and Science" />
+            <img class="h-[120px] lg:h-[180px] mb-2 lg:mb-0" src="img/engineering&sicence-img.png" alt="Logo Engineering and Science" />
             <div class="max-w-full ml-0 lg:ml-4">
               <h3 class="text-xl text-light font-semibold mb-3">Engineering and Science</h3>
               <p class="text-sm text-light/70 leading-loose">Survey dan Penelitian, menjalankan kegiatan-kegiatan observasi pemeriksaan, penelitian, pengkajian atau pengujian serta pengawasan atas suatu obyek yang ditentuk.</p>
@@ -150,15 +244,15 @@
     <section class="grid grid-cols-1 lg:grid-cols-3">
       <!-- Left Column - Definition -->
       <div class="flex items-stretch w-full">
-        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('src/img/definition-bg/architecture-interior-definition-bg.jpeg')">
+        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('img/definition-bg/architecture-interior-definition-bg.jpeg')">
           <!-- Content - Glass Box -->
           <div class="max-w-sm w-full overflow-hidden border-2 border-light rounded-xl">
             <div class="text-light bg-slate-600/50 backdrop-blur-md p-6">
-              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="src/img/architecture-interior-logo.jpg" alt="Logo Architecture Interior" />
+              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="img/architecture-interior-logo.jpg" alt="Logo Architecture Interior" />
               <p class="text-sm leading-loose mb-4">
                 Arsitektur adalah seni merencanakan, mendesain, dan membangun struktur fisik, seperti bangunan, jembatan, dan ruang publik. Itu menggabungkan estetika, fungsi, keamanan, dan keberlanjutan.
               </p>
-              <img class="block h-[56px] object-cover object-center mx-auto" src="src/img/logo-u-putih.png" alt="Logo Urbelco" />
+              <img class="block h-[56px] object-cover object-center mx-auto" src="img/logo-u-putih.png" alt="Logo Urbelco" />
             </div>
           </div>
         </div>
@@ -166,15 +260,15 @@
       <!-- Right Column - Content -->
       <div class="grid lg:col-span-2 lg:pt-2 pb-2">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 lg:mt-0 px-2">
-          <img class="content-3x3" src="src/img/architecture-interior-definition-gallery/5.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/architecture-interior-definition-gallery/2.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/architecture-interior-definition-gallery/1.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/architecture-interior-definition-gallery/4.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/architecture-interior-definition-gallery/3.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/architecture-interior-definition-gallery/6.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Architecture Interior Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/architecture-interior-definition-gallery/5.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/architecture-interior-definition-gallery/2.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/architecture-interior-definition-gallery/1.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/architecture-interior-definition-gallery/4.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/architecture-interior-definition-gallery/3.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/architecture-interior-definition-gallery/6.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Architecture Interior Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Architecture Interior Content" />
         </div>
       </div>
     </section>
@@ -184,7 +278,7 @@
       <div class="bg-blue-100 px-4 py-6">
         <h2 class="text-2xl font-bold mb-2">Arsitektur dan Interior</h2>
         <p class="font-medium mb-4">Star Kost Putri</p>
-        <img class="block h-[180px] aspect-video object-cover" src="src/img/architecture-interior-detail-gallery/architecture-interior-side-kiri.jpeg" alt="" />
+        <img class="block h-[180px] aspect-video object-cover" src="img/architecture-interior-detail-gallery/architecture-interior-side-kiri.jpeg" alt="" />
         <!-- Lokasi -->
         <div class="mt-6">
           <h3 class="font-bold mb-2">Lokasi:</h3>
@@ -221,18 +315,18 @@
         <div class="grid md:grid-cols-2 gap-2">
           <!-- Left Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/architecture-interior-detail-gallery/1.jpeg" alt="Architecture Interior Gallery" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/architecture-interior-detail-gallery/1.jpeg" alt="Architecture Interior Gallery" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/architecture-interior-detail-gallery/2.jpeg" alt="Architecture Interior Gallery" />
-              <img class="aspect-[3/4] object-cover" src="src/img/architecture-interior-detail-gallery/3.jpeg" alt="Architecture Interior Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/architecture-interior-detail-gallery/2.jpeg" alt="Architecture Interior Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/architecture-interior-detail-gallery/3.jpeg" alt="Architecture Interior Gallery" />
             </div>
           </div>
           <!-- Right Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/architecture-interior-detail-gallery/4.jpeg" alt="Architecture Interior Gallery" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/architecture-interior-detail-gallery/4.jpeg" alt="Architecture Interior Gallery" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/architecture-interior-detail-gallery/5.jpeg" alt="Architecture Interior Gallery" />
-              <img class="aspect-[3/4] object-cover" src="src/img/architecture-interior-detail-gallery/6.jpeg" alt="Architecture Interior Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/architecture-interior-detail-gallery/5.jpeg" alt="Architecture Interior Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/architecture-interior-detail-gallery/6.jpeg" alt="Architecture Interior Gallery" />
             </div>
           </div>
         </div>
@@ -242,16 +336,16 @@
     <section class="grid grid-cols-1 lg:grid-cols-3">
       <!-- Left Column - Definition -->
       <div class="flex items-stretch w-full">
-        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('src/img/definition-bg/urban-design-masterplan-definition-bg.jpeg')">
+        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('img/definition-bg/urban-design-masterplan-definition-bg.jpeg')">
           <!-- Content - Glass Box -->
           <div class="max-w-sm w-full overflow-hidden border-2 border-light rounded-xl">
             <div class="text-light bg-slate-600/50 backdrop-blur-md p-6">
-              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="src/img/urbandesignmasterplan.png" alt="Logo Urban Design Masterplan" />
+              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="img/urbandesignmasterplan.png" alt="Logo Urban Design Masterplan" />
               <p class="text-sm leading-loose mb-4">
                 Seorang urban designer adalah seorang perencana perkotaan yang bertugas merancang rencana tata kota yang berkelanjutan dan fungsional, dengan tujuan menciptakan lingkungan perkotaan yang efisien, aman, nyaman, dan
                 berkelanjutan bagi penduduknya.
               </p>
-              <img class="block h-[56px] object-cover object-center mx-auto" src="src/img/logo-u-putih.png" alt="Logo Urbelco" />
+              <img class="block h-[56px] object-cover object-center mx-auto" src="img/logo-u-putih.png" alt="Logo Urbelco" />
             </div>
           </div>
         </div>
@@ -259,15 +353,15 @@
       <!-- Right Column - Content -->
       <div class="grid lg:col-span-2 lg:pt-2 pb-2">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 lg:mt-0 px-2">
-          <img class="content-3x3" src="src/img/urban-design-definition-gallery/1.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/urban-design-definition-gallery/2.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/urban-design-definition-gallery/3.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/urban-design-definition-gallery/4.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Urban Design Masterplan Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/urban-design-definition-gallery/1.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/urban-design-definition-gallery/2.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/urban-design-definition-gallery/3.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/urban-design-definition-gallery/4.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Urban Design Masterplan Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Urban Design Masterplan Content" />
         </div>
       </div>
     </section>
@@ -277,7 +371,7 @@
       <div class="bg-blue-100 px-4 py-6">
         <h2 class="text-2xl font-bold mb-2">Urban Design dan Masterplan</h2>
         <p class="font-medium mb-4">Jatiluhur Green Campus</p>
-        <img class="block h-[180px] aspect-video object-cover" src="src/img/architecture-interior-detail-gallery/architecture-interior-side-kiri.jpeg" alt="" />
+        <img class="block h-[180px] aspect-video object-cover" src="img/architecture-interior-detail-gallery/architecture-interior-side-kiri.jpeg" alt="" />
         <!-- Lokasi -->
         <div class="mt-6">
           <h3 class="font-bold mb-2">Lokasi:</h3>
@@ -314,18 +408,18 @@
         <div class="grid md:grid-cols-2 gap-2">
           <!-- Left Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/urban-design-masterplan-detail-gallery/1.jpeg" alt="Urban Design Masterplan Gallery" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/urban-design-masterplan-detail-gallery/1.jpeg" alt="Urban Design Masterplan Gallery" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/urban-design-masterplan-detail-gallery/3.jpeg" alt="Urban Design Masterplan Gallery" />
-              <img class="aspect-[3/4] object-cover" src="src/img/urban-design-masterplan-detail-gallery/4.png" alt="Urban Design Masterplan Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/urban-design-masterplan-detail-gallery/3.jpeg" alt="Urban Design Masterplan Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/urban-design-masterplan-detail-gallery/4.png" alt="Urban Design Masterplan Gallery" />
             </div>
           </div>
           <!-- Right Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/urban-design-masterplan-detail-gallery/2.jpeg" alt="Urban Design Masterplan Gallery" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/urban-design-masterplan-detail-gallery/2.jpeg" alt="Urban Design Masterplan Gallery" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/urban-design-masterplan-detail-gallery/5.jpeg" alt="Urban Design Masterplan Gallery" />
-              <img class="aspect-[3/4] object-cover" src="src/img/urban-design-masterplan-detail-gallery/6.jpeg" alt="Urban Design Masterplan Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/urban-design-masterplan-detail-gallery/5.jpeg" alt="Urban Design Masterplan Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/urban-design-masterplan-detail-gallery/6.jpeg" alt="Urban Design Masterplan Gallery" />
             </div>
           </div>
         </div>
@@ -335,16 +429,16 @@
     <section class="grid grid-cols-1 lg:grid-cols-3">
       <!-- Left Column - Definition -->
       <div class="flex items-stretch w-full">
-        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('src/img/definition-bg/engineering-science-definition-bg.jpg')">
+        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('img/definition-bg/engineering-science-definition-bg.jpg')">
           <!-- Content - Glass Box -->
           <div class="max-w-sm w-full overflow-hidden border-2 border-light rounded-xl">
             <div class="text-light bg-slate-600/50 backdrop-blur-md p-6">
-              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="src/img/engineering-science-definisi-logo.png" alt="Logo Engineering and Science" />
+              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="img/engineering-science-definisi-logo.png" alt="Logo Engineering and Science" />
               <p class="text-sm leading-loose mb-4">
                 Jasa engineering adalah layanan yang disediakan oleh para profesional dengan pengetahuan teknis dan keahlian dalam rekayasa atau teknik. Ini mencakup perencanaan, desain, pengembangan, pengelolaan proyek, dan implementasi
                 berbagai proyek teknik dan konstruksi.
               </p>
-              <img class="block h-[56px] object-cover object-center mx-auto" src="src/img/logo-u-putih.png" alt="Logo Urbelco" />
+              <img class="block h-[56px] object-cover object-center mx-auto" src="img/logo-u-putih.png" alt="Logo Urbelco" />
             </div>
           </div>
         </div>
@@ -352,15 +446,15 @@
       <!-- Right Column - Content -->
       <div class="grid lg:col-span-2 lg:pt-2 pb-2">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 lg:mt-0 px-2">
-          <img class="content-3x3" src="src/img/engineering&science-definition-gallery/1.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/engineering&science-definition-gallery/2.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Engineering and Science Content" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/engineering&science-definition-gallery/1.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/engineering&science-definition-gallery/2.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Engineering and Science Content" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Engineering and Science Content" />
         </div>
       </div>
     </section>
@@ -370,7 +464,7 @@
       <div class="bg-blue-100 px-4 py-6">
         <h2 class="text-2xl font-bold mb-2">Engineering dan Science</h2>
         <p class="font-medium mb-4">Penyelidikan Air Tanah (Geolistrik)</p>
-        <img class="block h-[180px] aspect-video object-cover" src="src/img/engineering&science.jpeg" alt="" />
+        <img class="block h-[180px] aspect-video object-cover" src="img/engineering&science.jpeg" alt="" />
         <!-- Lokasi -->
         <div class="mt-6">
           <h3 class="font-bold mb-2">Lokasi:</h3>
@@ -407,18 +501,18 @@
         <div class="grid md:grid-cols-2 gap-2">
           <!-- Left Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/engineering&science-detail-gallery/3.jpeg" alt="Engineering and Science Gallery" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/engineering&science-detail-gallery/3.jpeg" alt="Engineering and Science Gallery" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/engineering&science-detail-gallery/2.jpeg" alt="Engineering and Science Gallery" />
-              <img class="aspect-[3/4] object-cover" src="src/img/engineering&science-detail-gallery/1.jpeg" alt="Engineering and Science Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/engineering&science-detail-gallery/2.jpeg" alt="Engineering and Science Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/engineering&science-detail-gallery/1.jpeg" alt="Engineering and Science Gallery" />
             </div>
           </div>
           <!-- Right Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/engineering&science-detail-gallery/4.jpeg" alt="Engineering and Science Gallery" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/engineering&science-detail-gallery/4.jpeg" alt="Engineering and Science Gallery" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/engineering&science-detail-gallery/5.jpeg" alt="Engineering and Science Gallery" />
-              <img class="aspect-[3/4] object-cover" src="src/img/engineering&science-detail-gallery/6.jpeg" alt="Engineering and Science Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/engineering&science-detail-gallery/5.jpeg" alt="Engineering and Science Gallery" />
+              <img class="aspect-[3/4] object-cover" src="img/engineering&science-detail-gallery/6.jpeg" alt="Engineering and Science Gallery" />
             </div>
           </div>
         </div>
@@ -428,16 +522,16 @@
     <section class="grid grid-cols-1 lg:grid-cols-3">
       <!-- Left Column - Definition -->
       <div class="flex items-stretch w-full">
-        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('src/img/definition-bg/legalconsultantforbuildingindustries-definition-bg.png')">
+        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('img/definition-bg/legalconsultantforbuildingindustries-definition-bg.png')">
           <!-- Content - Glass Box -->
           <div class="max-w-sm w-full overflow-hidden border-2 border-light rounded-xl">
             <div class="text-light bg-slate-600/50 backdrop-blur-md p-6">
-              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="src/img/legalconsultantforbuildingindustries-logo.png" alt="Logo Legal Consultang for Building Industries" />
+              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="img/legalconsultantforbuildingindustries-logo.png" alt="Logo Legal Consultang for Building Industries" />
               <p class="text-sm leading-loose mb-4">
                 Proses perolehan sertifikat laik fungsi melibatkan pemeriksaan oleh pejabat berwenang untuk menilai keselamatan, kesehatan, dan kelayakan teknis sebuah bangunan Biasanya, sertifikat ini dibutuhkan sebelum bangunan dapat
                 digunakan untuk tujuan komersial atau perumahan.
               </p>
-              <img class="block h-[56px] object-cover object-center mx-auto" src="src/img/logo-u-putih.png" alt="Logo Urbelco" />
+              <img class="block h-[56px] object-cover object-center mx-auto" src="img/logo-u-putih.png" alt="Logo Urbelco" />
             </div>
           </div>
         </div>
@@ -445,15 +539,15 @@
       <!-- Right Column - Content -->
       <div class="grid lg:col-span-2 lg:pt-2 pb-2">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 lg:mt-0 px-2">
-          <img class="content-3x3" src="src/img/legal-consultant-for-building-industries-definition-gallery/1.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/legal-consultant-for-building-industries-definition-gallery/2.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Legal Consultang for Building Industries" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/legal-consultant-for-building-industries-definition-gallery/1.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/legal-consultant-for-building-industries-definition-gallery/2.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Legal Consultang for Building Industries" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Legal Consultang for Building Industries" />
         </div>
       </div>
     </section>
@@ -463,7 +557,7 @@
       <div class="bg-blue-100 px-4 py-6">
         <h2 class="text-2xl font-bold mb-2">Legal Consultang for Building Industries</h2>
         <p class="font-medium mb-4">SLF (Sertifikat Laik Fungsi) & PBG (Izin Persetujuan Bangunan Gedung)</p>
-        <img class="block h-[180px] aspect-video object-cover" src="src/img/legalconsultantforbuildingindustries-detail.jpeg" alt="" />
+        <img class="block h-[180px] aspect-video object-cover" src="img/legalconsultantforbuildingindustries-detail.jpeg" alt="" />
         <!-- Lokasi -->
         <div class="mt-6">
           <h3 class="font-bold mb-2">Lokasi:</h3>
@@ -500,18 +594,18 @@
         <div class="grid md:grid-cols-2 gap-2">
           <!-- Left Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/legal-consultant-for-building-industries-detail-gallery/1.jpeg" alt="Legal Consultang for Building Industries" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/legal-consultant-for-building-industries-detail-gallery/1.jpeg" alt="Legal Consultang for Building Industries" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/legal-consultant-for-building-industries-detail-gallery/2.jpeg" alt="Legal Consultang for Building Industries" />
-              <img class="aspect-[3/4] object-cover" src="src/img/legal-consultant-for-building-industries-detail-gallery/3.jpeg" alt="Legal Consultang for Building Industries" />
+              <img class="aspect-[3/4] object-cover" src="img/legal-consultant-for-building-industries-detail-gallery/2.jpeg" alt="Legal Consultang for Building Industries" />
+              <img class="aspect-[3/4] object-cover" src="img/legal-consultant-for-building-industries-detail-gallery/3.jpeg" alt="Legal Consultang for Building Industries" />
             </div>
           </div>
           <!-- Right Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/legal-consultant-for-building-industries-detail-gallery/4.jpeg" alt="Legal Consultang for Building Industries" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/legal-consultant-for-building-industries-detail-gallery/4.jpeg" alt="Legal Consultang for Building Industries" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/legal-consultant-for-building-industries-detail-gallery/5.jpeg" alt="Legal Consultang for Building Industries" />
-              <img class="aspect-[3/4] object-cover" src="src/img/legal-consultant-for-building-industries-detail-gallery/6.jpeg" alt="Legal Consultang for Building Industries" />
+              <img class="aspect-[3/4] object-cover" src="img/legal-consultant-for-building-industries-detail-gallery/5.jpeg" alt="Legal Consultang for Building Industries" />
+              <img class="aspect-[3/4] object-cover" src="img/legal-consultant-for-building-industries-detail-gallery/6.jpeg" alt="Legal Consultang for Building Industries" />
             </div>
           </div>
         </div>
@@ -521,16 +615,16 @@
     <section class="grid grid-cols-1 lg:grid-cols-3">
       <!-- Left Column - Definition -->
       <div class="flex items-stretch w-full">
-        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('src/img/definition-bg/research-definition-bg.jpeg')">
+        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('img/definition-bg/research-definition-bg.jpeg')">
           <!-- Content - Glass Box -->
           <div class="max-w-sm w-full overflow-hidden border-2 border-light rounded-xl">
             <div class="text-light bg-slate-600/50 backdrop-blur-md p-6">
-              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="src/img/research-logo-definition.png" alt="Logo Research" />
+              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="img/research-logo-definition.png" alt="Logo Research" />
               <p class="text-sm leading-loose mb-4">
                 Tim riset terdiri dari sejumlah individu yang bekerja bersama dalam suatu proyek riset. Setiap anggota tim memiliki peran dan tanggung jawab tertentu yang berkontribusi pada kesuksesan dan kemajuan proyek riset secara
                 keseluruhan.
               </p>
-              <img class="block h-[56px] object-cover object-center mx-auto" src="src/img/logo-u-putih.png" alt="Logo Urbelco" />
+              <img class="block h-[56px] object-cover object-center mx-auto" src="img/logo-u-putih.png" alt="Logo Urbelco" />
             </div>
           </div>
         </div>
@@ -538,15 +632,15 @@
       <!-- Right Column - Content -->
       <div class="grid lg:col-span-2 lg:pt-2 pb-2">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 lg:mt-0 px-2">
-          <img class="content-3x3" src="src/img/research-definition-gallery/1.png" alt="Research" />
-          <img class="content-3x3" src="src/img/research-definition-gallery/2.png" alt="Research" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Research" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Research" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Research" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Research" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Research" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Research" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Research" />
+          <img class="content-3x3" src="img/research-definition-gallery/1.png" alt="Research" />
+          <img class="content-3x3" src="img/research-definition-gallery/2.png" alt="Research" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Research" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Research" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Research" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Research" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Research" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Research" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Research" />
         </div>
       </div>
     </section>
@@ -556,7 +650,7 @@
       <div class="bg-blue-100 px-4 py-6">
         <h2 class="text-2xl font-bold mb-2">Research</h2>
         <p class="font-medium mb-4">Tutupan Lahan Gambut Kab. Kubu Raya, Prov. KalBar</p>
-        <img class="block h-[180px] aspect-video object-cover" src="src/img/legalconsultantforbuildingindustries-detail.jpeg" alt="" />
+        <img class="block h-[180px] aspect-video object-cover" src="img/legalconsultantforbuildingindustries-detail.jpeg" alt="" />
         <!-- Lokasi -->
         <div class="mt-6">
           <h3 class="font-bold mb-2">Lokasi:</h3>
@@ -593,18 +687,18 @@
         <div class="grid md:grid-cols-2 gap-2">
           <!-- Left Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/research-detail-gallery/research-img-kiri-besar.jpeg" alt="Research" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/research-detail-gallery/research-img-kiri-besar.jpeg" alt="Research" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/research-detail-gallery/research-img-kiri-kecil.jpeg" alt="Research" />
-              <img class="aspect-[3/4] object-cover" src="src/img/empty-img.png" alt="Research" />
+              <img class="aspect-[3/4] object-cover" src="img/research-detail-gallery/research-img-kiri-kecil.jpeg" alt="Research" />
+              <img class="aspect-[3/4] object-cover" src="img/empty-img.png" alt="Research" />
             </div>
           </div>
           <!-- Right Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/research-detail-gallery/research-img-kanan-besar.jpeg" alt="Research" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/research-detail-gallery/research-img-kanan-besar.jpeg" alt="Research" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/empty-img.png" alt="Research" />
-              <img class="aspect-[3/4] object-cover" src="src/img/empty-img.png" alt="Research" />
+              <img class="aspect-[3/4] object-cover" src="img/empty-img.png" alt="Research" />
+              <img class="aspect-[3/4] object-cover" src="img/empty-img.png" alt="Research" />
             </div>
           </div>
         </div>
@@ -614,16 +708,16 @@
     <section class="grid grid-cols-1 lg:grid-cols-3">
       <!-- Left Column - Definition -->
       <div class="flex items-stretch w-full">
-        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('src/img/definition-bg/environment-definition-bg.jpg')">
+        <div class="flex justify-center items-center w-full bg-cover bg-center px-6 lg:px-0 py-16 lg:py-0" style="background-image: url('img/definition-bg/environment-definition-bg.jpg')">
           <!-- Content - Glass Box -->
           <div class="max-w-sm w-full overflow-hidden border-2 border-light rounded-xl">
             <div class="text-light bg-slate-600/50 backdrop-blur-md p-6">
-              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="src/img/environment-logo-definition.png" alt="Logo Environment" />
+              <img class="block h-[180px] object-cover object-center mx-auto mb-4" src="img/environment-logo-definition.png" alt="Logo Environment" />
               <p class="text-sm leading-loose mb-4">
                 Konsultan lingkungan memberikan penilaian dan layanan konsultasi kepada klien terkait pengelolaan masalah lingkungan serta energi terbarukan, membantu individu, perusahaan, atau pemerintah untuk mengadopsi dan
                 mengintegrasikan energi terbarukan ke dalam sistem energi mereka.
               </p>
-              <img class="block h-[56px] object-cover object-center mx-auto" src="src/img/logo-u-putih.png" alt="Logo Urbelco" />
+              <img class="block h-[56px] object-cover object-center mx-auto" src="img/logo-u-putih.png" alt="Logo Urbelco" />
             </div>
           </div>
         </div>
@@ -631,15 +725,15 @@
       <!-- Right Column - Content -->
       <div class="grid lg:col-span-2 lg:pt-2 pb-2">
         <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mt-2 lg:mt-0 px-2">
-          <img class="content-3x3" src="src/img/environment-definition-gallery/1.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/environment-definition-gallery/2.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/environment-definition-gallery/3.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/environment-definition-gallery/4.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/environment-definition-gallery/5.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Environment" />
-          <img class="content-3x3" src="src/img/empty-img.png" alt="Environment" />
+          <img class="content-3x3" src="img/environment-definition-gallery/1.png" alt="Environment" />
+          <img class="content-3x3" src="img/environment-definition-gallery/2.png" alt="Environment" />
+          <img class="content-3x3" src="img/environment-definition-gallery/3.png" alt="Environment" />
+          <img class="content-3x3" src="img/environment-definition-gallery/4.png" alt="Environment" />
+          <img class="content-3x3" src="img/environment-definition-gallery/5.png" alt="Environment" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Environment" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Environment" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Environment" />
+          <img class="content-3x3" src="img/empty-img.png" alt="Environment" />
         </div>
       </div>
     </section>
@@ -649,7 +743,7 @@
       <div class="bg-blue-100 px-4 py-6">
         <h2 class="text-2xl font-bold mb-2">Environment</h2>
         <p class="font-medium mb-4">Pembangkit Listrik Tenaga Mikrohidro (PLTMH)</p>
-        <img class="block h-[180px] aspect-video object-cover" src="src/img/environment-detail-gallery/environment-img-detail.jpeg" alt="" />
+        <img class="block h-[180px] aspect-video object-cover" src="img/environment-detail-gallery/environment-img-detail.jpeg" alt="" />
         <!-- Lokasi -->
         <div class="mt-6">
           <h3 class="font-bold mb-2">Lokasi:</h3>
@@ -686,28 +780,28 @@
         <div class="grid md:grid-cols-2 gap-2">
           <!-- Left Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/environment-detail-gallery/1.png" alt="Environment" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/environment-detail-gallery/1.png" alt="Environment" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/environment-detail-gallery/3.jpeg" alt="Environment" />
-              <img class="aspect-[3/4] object-cover" src="src/img/environment-detail-gallery/4.jpeg" alt="Environment" />
+              <img class="aspect-[3/4] object-cover" src="img/environment-detail-gallery/3.jpeg" alt="Environment" />
+              <img class="aspect-[3/4] object-cover" src="img/environment-detail-gallery/4.jpeg" alt="Environment" />
             </div>
           </div>
           <!-- Right Column -->
           <div class="gap-2">
-            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="src/img/environment-detail-gallery/2.jpeg" alt="Environment" />
+            <img class="aspect-square lg:aspect-[3/4] object-cover mb-2" src="img/environment-detail-gallery/2.jpeg" alt="Environment" />
             <div class="grid grid-cols-2 gap-2">
-              <img class="aspect-[3/4] object-cover" src="src/img/environment-detail-gallery/5.jpeg" alt="Environment" />
-              <img class="aspect-[3/4] object-cover" src="src/img/environment-detail-gallery/6.jpeg" alt="Environment" />
+              <img class="aspect-[3/4] object-cover" src="img/environment-detail-gallery/5.jpeg" alt="Environment" />
+              <img class="aspect-[3/4] object-cover" src="img/environment-detail-gallery/6.jpeg" alt="Environment" />
             </div>
           </div>
         </div>
       </div>
     </section>
     <!-- Class -->
-    <section id="class" class="flex w-full min-h-screen bg-cover pt-28 pb-16 lg:py-36" style="background-image: url('src/img/login-bg.png')">
+    <section id="class" class="flex w-full min-h-screen bg-cover pt-28 pb-16 lg:py-36" style="background-image: url('img/login-bg.png')">
       <div class="container m-auto">
         <!-- Logo Urbelco -->
-        <img class="block h-14 lg:h-20 mx-auto mb-10 lg:mb-14" src="src/img/urbelco.png" alt="Logo Urbelco" />
+        <img class="block h-14 lg:h-20 mx-auto mb-10 lg:mb-14" src="img/urbelco.png" alt="Logo Urbelco" />
         <!-- Form Register -->
         <div class="max-w-lg bg-light rounded-xl mx-auto px-6 py-12">
           <h2 class="text-2xl text-center uppercase font-bold mb-8">Form Pendaftaran Pelatihan Urbelclass</h2>
@@ -787,7 +881,7 @@
       </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="bg-cover py-16 lg:py-36" style="background-image: url('src/img/contact-bg.jpg')">
+    <section id="contact" class="bg-cover py-16 lg:py-36" style="background-image: url('img/contact-bg.jpg')">
       <div class="w-full bg-primary/95 py-16">
         <!-- Header -->
         <div class="mx-auto mb-12">
@@ -798,13 +892,13 @@
           <div class="grid lg:grid-cols-3">
             <!-- Telephone -->
             <div class="text-light text-center mb-6 lg:mb-0">
-              <img class="block h-24 mb-3 lg:mb-4 mx-auto" src="src/img/contact-logo/email-contact.png" alt="Logo Telephone" />
+              <img class="block h-24 mb-3 lg:mb-4 mx-auto" src="img/contact-logo/email-contact.png" alt="Logo Telephone" />
               <h4 class="text-lg font-semibold mb-2">Telepon</h4>
               <p class="text-sm text-light/90">+62 8980 584527</p>
             </div>
             <!-- Location -->
             <div class="text-light text-center mb-6 lg:mb-0">
-              <img class="block h-24 mb-3 lg:mb-4 mx-auto" src="src/img/contact-logo/email-contact.png" alt="Logo Location" />
+              <img class="block h-24 mb-3 lg:mb-4 mx-auto" src="img/contact-logo/email-contact.png" alt="Logo Location" />
               <!-- Urbelco -->
               <div class="mb-6">
                 <h4 class="text-lg font-semibold mb-2">Urbelco</h4>
@@ -818,7 +912,7 @@
             </div>
             <!-- Email -->
             <div class="text-light text-center mb-0">
-              <img class="block h-24 mb-3 lg:mb-4 mx-auto" src="src/img/contact-logo/email-contact.png" alt="Logo Email" />
+              <img class="block h-24 mb-3 lg:mb-4 mx-auto" src="img/contact-logo/email-contact.png" alt="Logo Email" />
               <!-- Urbelco -->
               <div class="mb-6">
                 <h4 class="text-lg font-semibold mb-2">Urbelco</h4>

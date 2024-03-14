@@ -50,9 +50,34 @@ body {
   }
 }
 
+/* Navbar */
+.navbar-fixed {
+  @apply fixed z-[999] bg-primary;
+}
+
+.hamburger-line {
+  @apply block w-[24px] h-[2px] bg-light my-1.5;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
 /* Typography */
 .headlinee {
   @apply text-2xl lg:text-4xl text-primary font-bold mb-4;
+}
+
+.overlinee {
+  @apply text-base lg:text-lg text-primary/60 tracking-[0.35px] font-medium mb-4;
 }
 
 .headlinee-bg-primary {
@@ -61,6 +86,10 @@ body {
 
 .body {
   @apply text-sm text-paragraph tracking-[0.3px] leading-loose;
+}
+
+.navbar-links {
+  @apply flex text-sm text-primary lg:text-light tracking-[0.3px] font-medium mx-6 py-4;
 }
 
 /* Gallery */

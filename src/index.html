@@ -9,6 +9,103 @@
     <title>Urbelco</title>
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center w-full fixed z-50 bg-primary p-6">
+      <!-- Brand -->
+      <a href="index.html"><img class="h-10" src="img/logo.png" alt="Logo Urbelco" /></a>
+      <!-- Hamburger Menu Button -->
+      <div class="lg:hidden">
+        <button class="navbar-burger flex items-center text-light">
+          <svg class="block w-6 h-6 fill-current" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+      </div>
+      <!-- Nav Link -->
+      <ul class="hidden lg:flex lg:items-center lg:w-auto absolute top-1/2 left-1/2 lg:mx-auto transform -translate-x-1/2 -translate-y-1/2">
+        <!-- Home -->
+        <li>
+          <a href="#login" class="text-sm text-light font-medium mx-6">Home</a>
+        </li>
+        <!-- About -->
+        <li>
+          <a href="#about" class="text-sm text-light font-medium mx-6">About</a>
+        </li>
+        <!-- Workspace -->
+        <li>
+          <a href="#workspace" class="text-sm text-light font-medium mx-6">Workspace</a>
+        </li>
+        <!-- Research -->
+        <li>
+          <a href="#research" class="text-sm text-light font-medium mx-6">Research</a>
+        </li>
+        <!-- Environment -->
+        <li>
+          <a href="#environment" class="text-sm text-light font-medium mx-6">Environment</a>
+        </li>
+        <!-- Class -->
+        <li>
+          <a href="#class" class="text-sm text-light font-medium mx-6">Class</a>
+        </li>
+        <!-- Contact -->
+        <li>
+          <a href="#contact" class="text-sm text-light font-medium mx-6">Contact</a>
+        </li>
+      </ul>
+      <!-- Search Bar -->
+      <div class="hidden lg:block">
+        <input type="text" name="search" id="search" class="w-full text-sm text-light bg-[#17384c] border-2 border-light/50 focus:border-light/100 focus:outline-none rounded-full px-4 py-3" placeholder="Cari disini" autocomplete="off" />
+      </div>
+    </nav>
+    <!-- Navbar Mobile -->
+    <div class="navbar-menu hidden relative z-50">
+      <div class="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25"></div>
+      <nav class="flex flex-col max-w-sm w-5/6 overflow-y-auto fixed top-0 left-0 bottom-0 bg-light border-r p-6">
+        <!-- Close Navbar Mobile Button -->
+        <div class="flex justify-end items-center mb-8">
+          <button class="navbar-close">
+            <svg class="cursor-pointer w-6 h-6 text-gray-400 hover:text-gray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        <!-- Nav Links Mobile -->
+        <ul>
+          <!-- Home -->
+          <li class="mb-1">
+            <a href="#login" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Home</a>
+          </li>
+          <!-- About -->
+          <li class="mb-1">
+            <a href="#about" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">About</a>
+          </li>
+          <!-- Workspace -->
+          <li class="mb-1">
+            <a href="#workspace" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Workspace</a>
+          </li>
+          <!-- Research -->
+          <li class="mb-1">
+            <a href="#research" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Research</a>
+          </li>
+          <!-- Environment -->
+          <li class="mb-1">
+            <a href="#environment" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Environment</a>
+          </li>
+          <!-- Class -->
+          <li class="mb-1">
+            <a href="#class" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Class</a>
+          </li>
+          <!-- Contact -->
+          <li class="mb-1">
+            <a href="#contact" class="block text-sm text-black font-medium hover:bg-blue-50 rounded-md px-4 py-3">Contact</a>
+          </li>
+        </ul>
+        <!-- Search Bar -->
+        <div class="block lg:hidden mt-auto mb-8">
+          <input type="text" name="" id="" class="w-full text-sm text-black bg-slate-100 focus:outline-primary rounded-full px-4 py-3" placeholder="Cari disini" autocomplete="off" />
+        </div>
+      </nav>
+    </div>
     <!-- Home Section -->
     <section id="home" class="flex justify-center items-center min-h-screen bg-cover object-cover pt-36 lg:pt-48 pb-16 lg:pb-36" style="background-image: url('img/hero-bg.png')">
       <div class="container">
@@ -36,13 +133,13 @@
           <form action="" method="post">
             <!-- Email -->
             <div class="mb-6">
-              <label for="email" class="block text-sm mb-2">Email</label>
-              <input type="email" name="email" id="email" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="Lorem Ipsum" />
+              <label for="login_email" class="block text-sm mb-2">Email</label>
+              <input type="email" name="email" id="login_email" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="Lorem Ipsum" />
             </div>
             <!-- Password -->
             <div class="mb-6">
-              <label for="password" class="block text-sm mb-2">Password</label>
-              <input type="password" name="password" id="password" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="********" />
+              <label for="login_password" class="block text-sm mb-2">Password</label>
+              <input type="password" name="password" id="login_password" class="block w-full text-sm text-paragraph border border-slate-500 outline-primary rounded-md p-3" placeholder="********" />
             </div>
             <!-- Login Button -->
             <button type="submit" name="login" class="w-full text-sm text-light font-medium bg-primary hover:bg-[#17384c] rounded-md p-4 transition duration-200">Login</button>
